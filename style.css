@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #0099ff;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.title h1 {
+    color: #0099ff;
+    font-size: 2.5rem;
+}
+
+.title p {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+.banner {
+    width: 100%;
+    height: 200px;
+    background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_20240319_204746_0000-r2O0TlWPmBNjSdywmQEfFWRejgBzoj.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0;
+    color: #0099ff;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+/* Carrossel */
+.carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 153, 255, 0.5);
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-control {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 153, 255, 0.8);
+}
+
+.car-info {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #0099ff;
+    animation: fadeIn 1s;
+}
+
+.car-info h3 {
+    color: #0099ff;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.car-info p {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.car-details {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.car-detail {
+    background-color: rgba(0, 153, 255, 0.2);
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.car-detail i {
+    margin-right: 8px;
+    color: #0099ff;
+}
+
+.contact-section {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    margin-top: 50px;
+    border-radius: 10px;
+    text-align: center;
+    border-top: 3px solid #0099ff;
+}
+
+.contact-section h2 {
+    color: #0099ff;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: #0099ff;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid #0099ff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .carousel-item img {
+        height: 300px;
+    }
+}
